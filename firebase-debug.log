@@ -1,0 +1,193 @@
+[debug] [2023-03-14T07:53:03.351Z] ----------------------------------------------------------------------
+[debug] [2023-03-14T07:53:03.352Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2023-03-14T07:53:03.352Z] CLI Version:   11.22.0
+[debug] [2023-03-14T07:53:03.352Z] Platform:      linux
+[debug] [2023-03-14T07:53:03.353Z] Node Version:  v16.17.0
+[debug] [2023-03-14T07:53:03.357Z] Time:          Tue Mar 14 2023 13:23:03 GMT+0530 (India Standard Time)
+[debug] [2023-03-14T07:53:03.357Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-14T07:53:03.399Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-14T07:53:03.400Z] > authorizing via signed-in user (oyvaatech@gmail.com)
+[debug] [2023-03-14T07:53:03.400Z] [iam] checking project x-space-3da44 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-03-14T07:53:03.401Z] > refreshing access token with scopes: []
+[debug] [2023-03-14T07:53:03.402Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-03-14T07:53:03.402Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-03-14T07:53:03.600Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-03-14T07:53:03.600Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-03-14T07:53:03.606Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions [none]
+[debug] [2023-03-14T07:53:03.606Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions x-goog-quota-user=projects/x-space-3da44
+[debug] [2023-03-14T07:53:03.606Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-14T07:53:05.064Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions 200
+[debug] [2023-03-14T07:53:05.064Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions {}
+[debug] [2023-03-14T07:53:05.065Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project x-space-3da44:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2023-03-14T07:53:05.065Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/x-space-3da44 [none]
+[debug] [2023-03-14T07:53:05.577Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/x-space-3da44 403
+[debug] [2023-03-14T07:53:05.577Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/x-space-3da44 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-03-14T07:53:05.577Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-03-14T07:53:05.720Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project x-space-3da44. Please make sure the project exists and your account has permission to access it.
+[debug] [2023-03-14T07:53:56.174Z] ----------------------------------------------------------------------
+[debug] [2023-03-14T07:53:56.175Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2023-03-14T07:53:56.176Z] CLI Version:   11.22.0
+[debug] [2023-03-14T07:53:56.176Z] Platform:      linux
+[debug] [2023-03-14T07:53:56.176Z] Node Version:  v16.17.0
+[debug] [2023-03-14T07:53:56.176Z] Time:          Tue Mar 14 2023 13:23:56 GMT+0530 (India Standard Time)
+[debug] [2023-03-14T07:53:56.176Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-14T07:53:56.214Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-14T07:53:56.214Z] > authorizing via signed-in user (oyvaatech@gmail.com)
+[debug] [2023-03-14T07:53:56.214Z] [iam] checking project x-space-3da44 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-03-14T07:53:56.215Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions [none]
+[debug] [2023-03-14T07:53:56.217Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions x-goog-quota-user=projects/x-space-3da44
+[debug] [2023-03-14T07:53:56.217Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-14T07:53:57.700Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions 200
+[debug] [2023-03-14T07:53:57.700Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions {}
+[debug] [2023-03-14T07:53:57.700Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project x-space-3da44:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2023-03-14T07:53:57.701Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/x-space-3da44 [none]
+[debug] [2023-03-14T07:53:58.209Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/x-space-3da44 403
+[debug] [2023-03-14T07:53:58.209Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/x-space-3da44 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-03-14T07:53:58.210Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-03-14T07:53:58.447Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project x-space-3da44. Please make sure the project exists and your account has permission to access it.
+[debug] [2023-03-14T07:55:07.978Z] ----------------------------------------------------------------------
+[debug] [2023-03-14T07:55:07.979Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2023-03-14T07:55:07.980Z] CLI Version:   11.22.0
+[debug] [2023-03-14T07:55:07.980Z] Platform:      linux
+[debug] [2023-03-14T07:55:07.980Z] Node Version:  v16.17.0
+[debug] [2023-03-14T07:55:07.980Z] Time:          Tue Mar 14 2023 13:25:07 GMT+0530 (India Standard Time)
+[debug] [2023-03-14T07:55:07.980Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-14T07:55:08.019Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-14T07:55:08.020Z] > authorizing via signed-in user (oyvaatech@gmail.com)
+[debug] [2023-03-14T07:55:08.020Z] [iam] checking project x-space-3da44 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-03-14T07:55:08.021Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions [none]
+[debug] [2023-03-14T07:55:08.021Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions x-goog-quota-user=projects/x-space-3da44
+[debug] [2023-03-14T07:55:08.021Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-14T07:55:09.483Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions 200
+[debug] [2023-03-14T07:55:09.484Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions {}
+[debug] [2023-03-14T07:55:09.484Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project x-space-3da44:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2023-03-14T07:55:09.484Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/x-space-3da44 [none]
+[debug] [2023-03-14T07:55:09.994Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/x-space-3da44 403
+[debug] [2023-03-14T07:55:09.994Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/x-space-3da44 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-03-14T07:55:09.995Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-03-14T07:55:10.179Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project x-space-3da44. Please make sure the project exists and your account has permission to access it.
+[debug] [2023-03-15T11:28:14.684Z] ----------------------------------------------------------------------
+[debug] [2023-03-15T11:28:14.685Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2023-03-15T11:28:14.685Z] CLI Version:   11.22.0
+[debug] [2023-03-15T11:28:14.685Z] Platform:      linux
+[debug] [2023-03-15T11:28:14.686Z] Node Version:  v16.17.0
+[debug] [2023-03-15T11:28:14.690Z] Time:          Wed Mar 15 2023 16:58:14 GMT+0530 (India Standard Time)
+[debug] [2023-03-15T11:28:14.690Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-15T11:28:14.692Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-03-15T11:28:14.743Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-15T11:28:14.743Z] > authorizing via signed-in user (oyvaatech@gmail.com)
+[debug] [2023-03-15T11:28:14.743Z] [iam] checking project x-space-3da44 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-03-15T11:28:14.744Z] > refreshing access token with scopes: []
+[debug] [2023-03-15T11:28:14.744Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-03-15T11:28:14.744Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-03-15T11:28:14.916Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-03-15T11:28:14.917Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-03-15T11:28:14.925Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions [none]
+[debug] [2023-03-15T11:28:14.925Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions x-goog-quota-user=projects/x-space-3da44
+[debug] [2023-03-15T11:28:14.925Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-15T11:28:15.316Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-03-15T11:28:15.316Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-03-15T11:28:16.442Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions 200
+[debug] [2023-03-15T11:28:16.442Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions {}
+[debug] [2023-03-15T11:28:16.443Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project x-space-3da44:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2023-03-15T11:28:16.443Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/x-space-3da44 [none]
+[debug] [2023-03-15T11:28:17.057Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/x-space-3da44 403
+[debug] [2023-03-15T11:28:17.057Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/x-space-3da44 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-03-15T11:28:17.058Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-03-15T11:28:17.196Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project x-space-3da44. Please make sure the project exists and your account has permission to access it.
+[debug] [2023-03-15T11:29:40.625Z] ----------------------------------------------------------------------
+[debug] [2023-03-15T11:29:40.626Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2023-03-15T11:29:40.627Z] CLI Version:   11.22.0
+[debug] [2023-03-15T11:29:40.627Z] Platform:      linux
+[debug] [2023-03-15T11:29:40.627Z] Node Version:  v16.17.0
+[debug] [2023-03-15T11:29:40.627Z] Time:          Wed Mar 15 2023 16:59:40 GMT+0530 (India Standard Time)
+[debug] [2023-03-15T11:29:40.627Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-15T11:29:40.670Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-15T11:29:40.671Z] > authorizing via signed-in user (oyvaatech@gmail.com)
+[debug] [2023-03-15T11:29:40.671Z] [iam] checking project x-space-3da44 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-03-15T11:29:40.672Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions [none]
+[debug] [2023-03-15T11:29:40.672Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions x-goog-quota-user=projects/x-space-3da44
+[debug] [2023-03-15T11:29:40.672Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-15T11:29:42.054Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions 200
+[debug] [2023-03-15T11:29:42.054Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions {}
+[debug] [2023-03-15T11:29:42.055Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project x-space-3da44:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2023-03-15T11:29:42.055Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/x-space-3da44 [none]
+[debug] [2023-03-15T11:29:42.765Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/x-space-3da44 403
+[debug] [2023-03-15T11:29:42.765Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/x-space-3da44 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-03-15T11:29:42.766Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-03-15T11:29:42.896Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project x-space-3da44. Please make sure the project exists and your account has permission to access it.
+[debug] [2023-03-15T11:31:14.555Z] ----------------------------------------------------------------------
+[debug] [2023-03-15T11:31:14.557Z] Command:       /usr/bin/node /usr/bin/firebase deploy
+[debug] [2023-03-15T11:31:14.557Z] CLI Version:   11.22.0
+[debug] [2023-03-15T11:31:14.557Z] Platform:      linux
+[debug] [2023-03-15T11:31:14.557Z] Node Version:  v16.17.0
+[debug] [2023-03-15T11:31:14.557Z] Time:          Wed Mar 15 2023 17:01:14 GMT+0530 (India Standard Time)
+[debug] [2023-03-15T11:31:14.557Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-15T11:31:14.599Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-15T11:31:14.599Z] > authorizing via signed-in user (oyvaatech@gmail.com)
+[debug] [2023-03-15T11:31:14.599Z] [iam] checking project x-space-3da44 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-03-15T11:31:14.601Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions [none]
+[debug] [2023-03-15T11:31:14.601Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions x-goog-quota-user=projects/x-space-3da44
+[debug] [2023-03-15T11:31:14.601Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-15T11:31:16.018Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions 200
+[debug] [2023-03-15T11:31:16.018Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/x-space-3da44:testIamPermissions {}
+[debug] [2023-03-15T11:31:16.019Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project x-space-3da44:
+
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2023-03-15T11:31:16.020Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/x-space-3da44 [none]
+[debug] [2023-03-15T11:31:16.474Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/x-space-3da44 403
+[debug] [2023-03-15T11:31:16.474Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/x-space-3da44 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-03-15T11:31:16.475Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-03-15T11:31:16.612Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project x-space-3da44. Please make sure the project exists and your account has permission to access it.

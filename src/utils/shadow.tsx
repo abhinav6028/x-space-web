@@ -1,0 +1,1 @@
+export const BOX_SHADOW_40 = "rgba(0, 0, 0, 0.15) 0px 5px 15px 0px"
